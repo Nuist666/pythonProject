@@ -1,0 +1,5 @@
+print(int('32'))
+print(float('32'))
+a = str(32.0)
+print(a)
+print(type(a))
