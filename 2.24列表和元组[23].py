@@ -1,3 +1,4 @@
+# 用pop()方法删除元素
 names = ['Liming', 'Lili', 'Daming', 'David']
 print(names)
 names.pop()
