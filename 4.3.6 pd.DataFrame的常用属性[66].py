@@ -1,0 +1,13 @@
+# 通过行、列标签或布尔序列访问多个元素
+# 按布尔序列访问行、列
+import pandas as pd
+
+a = pd.DataFrame([[21.7, 983, 0.64],
+                  [19.2, 991, 0.75],
+                  [13.4, 973, 0.83]],
+                 index=['s1', 's2', 's3'],
+                 columns=['t', 'p', 'rh']
+                 )
+print(a.loc[[True, False, True]])  # 行
+print('----------')
+print(a.loc[:, [True, False, True]])  # 列

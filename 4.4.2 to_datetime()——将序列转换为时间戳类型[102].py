@@ -1,0 +1,21 @@
+# 直接解析标准格式的时间字符串
+import pandas as pd
+
+a = pd.to_datetime(['20200228', '20200301'])
+b = pd.to_datetime(['2020-02-28', '2020-03-01'])
+c = pd.to_datetime(['2020/02/28', '2020/03/01'])
+d = pd.to_datetime(['202002281200', '202002281200'])
+e = pd.to_datetime(['2020-02-28 12:00', '2020-03-01 12:00'])
+f = pd.to_datetime(['2020/02/28 12:00', '2020/03/01 12:00'])
+g = pd.to_datetime(['20200228120050', '20200228120050'])
+h = pd.to_datetime(['2020-02-28 12:00:50', '2020-03-01 12:00:50'])
+i = pd.to_datetime(['2020/02/28 12:00:50', '2020/03/01 12:00:50'])
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+print(g)
+print(h)
+print(i)
