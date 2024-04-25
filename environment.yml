@@ -1,5 +1,0 @@
-name: my-project
-channels:
-  - defaults
-dependencies:
-  - python
