@@ -9,3 +9,11 @@ geom = unary_union([geom if geom.is_valid else geom.buffer(0) for geom in gdf['g
 
 print(type(gdf['geometry']), len(gdf['geometry']))
 print(type(geom))
+
+# 将合并后的几何对象转换为GeoDataFrame
+merged_gdf = gpd.GeoDataFrame(geometry=[geom], crs=gdf.crs)
+
+# 绘制多边形
+fig, ax = plt.subplots(figsize=(10, 10), subplot_kw={'projection': ccrs.PlateCarree()})
+merged_gdf.plot(ax=ax, facecolor='blue', edgecolor='black')
+plt.show()

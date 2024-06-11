@@ -4,7 +4,7 @@ import wrf
 from netCDF4 import Dataset
 
 # 将文件路径改为自己的
-ncfile = Dataset('wrfout_d01_2017-08-10_000000.nc')
+ncfile = Dataset('/home/nuist666/下载/data/wrfout_d01_2017-08-10_000000.nc')
 p = wrf.getvar(ncfile, 'pressure', timeidx=wrf.ALL_TIMES)  # 对于getvar()函数，可以指定timeidx参数的值为整数以选择提取时次，例如timeidx=0
 rh = wrf.getvar(ncfile, 'rh', timeidx=wrf.ALL_TIMES)  # timeidx=wrf.ALL_TIMES表明提取全部时次
 print(rh)
